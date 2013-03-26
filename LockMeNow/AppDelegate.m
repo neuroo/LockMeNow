@@ -38,7 +38,7 @@
     
     // Check the status of the app form the user default store.
     BOOL wasLocked = [defaults boolForKey:@"lockme-status"];
-    if (wasLocked == FALSE) {
+    if (wasLocked != TRUE) {
         // Location of the dylib that contains the private locking function
         // `GSEventLockDevice`
         char *gsDylib = "/System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices";

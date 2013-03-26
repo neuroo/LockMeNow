@@ -28,6 +28,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     NSLog(@"applicationWillTerminate");
+    // Synchronize the defaults so that it's surely saved
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [self saveContext];
 }
 
